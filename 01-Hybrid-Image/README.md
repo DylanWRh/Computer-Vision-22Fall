@@ -13,7 +13,7 @@ python hybrid.py
 Low pass image, high pass image and hybrid image will be saved
 as `left.jpg`, `right.jpg`, `hybrid.jpg`.
 
-If you want to process your own images, run
+To process your own images, run
 ```
 python hybrid.py --left image1_path --right image2_path
 ```
