@@ -10,7 +10,7 @@ Run the command below to produce the hybrid image of [dog.bmp](1_dog.bmp) and [c
 ```
 python hybrid.py
 ```
-Hybrid image will be saved `hybrid.jpg`.
+Hybrid image will be saved `hybrid.png`.
 
 To process your own images, run
 ```
