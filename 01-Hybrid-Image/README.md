@@ -6,7 +6,7 @@ and is implemented according to the requirements of the 3rd problem in
 
 ## Usage
 
-Run the command below to produce the hybrid image of [dog.bmp](1_dog.bmp) and [cat.bmp](1_cat.bmp).
+Run the command below to produce the [hybrid image](http://olivalab.mit.edu/hybrid_gallery/gallery.html) of [dog.bmp](1_dog.bmp) and [cat.bmp](1_cat.bmp).
 ```
 python hybrid.py
 ```
