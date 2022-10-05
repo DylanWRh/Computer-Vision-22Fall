@@ -10,8 +10,7 @@ Run the command below to produce the hybrid image of [dog.bmp](1_dog.bmp) and [c
 ```
 python hybrid.py
 ```
-Low pass image, high pass image and hybrid image will be saved
-as `left.jpg`, `right.jpg`, `hybrid.jpg`.
+Hybrid image will be saved `hybrid.jpg`.
 
 To process your own images, run
 ```
