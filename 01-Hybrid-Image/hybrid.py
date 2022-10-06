@@ -53,11 +53,19 @@ def gaussian_blur_kernel_2d(h, w, sigma):
 
 def low_pass(img, h, w, sigma):
     kernel = gaussian_blur_kernel_2d(h, w, sigma)
-    return convolve_2d(img, kernel)
+    res = convolve_2d(img, kernel)
+    resmax, resmin = np.max(res), np.min(res)
+    if resmax != resmin:
+        res = (res - resmin) / (resmax - resmin)
+    return res
 
 
 def high_pass(img, h, w, sigma):
-    return img - low_pass(img, h, w, sigma)
+    res = img - low_pass(img, h, w, sigma)
+    resmax, resmin = np.max(res), np.min(res)
+    if resmax != resmin:
+        res = (res - resmin) / (resmax - resmin)
+    return res
 
 
 def hybrid_image(left, right, hl, wl, hr, wr, sigmal, sigmar, weight):
@@ -66,7 +74,7 @@ def hybrid_image(left, right, hl, wl, hr, wr, sigmal, sigmar, weight):
     res = low_left * weight + high_right * (1 - weight)
     # save_file(args.left_save, low_left * 255)
     # save_file(args.right_save, high_right * 255)
-    save_file(args.hybrid_save, res * 255 * 2)
+    save_file(args.hybrid_save, res * 255)
 
 
 def main():
