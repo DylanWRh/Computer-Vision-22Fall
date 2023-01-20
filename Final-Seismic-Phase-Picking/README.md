@@ -2,6 +2,6 @@
 
 This is a total failure.
 
-The model do not converge at all.
+The model does not converge at all.
 
 HAHAHA!
